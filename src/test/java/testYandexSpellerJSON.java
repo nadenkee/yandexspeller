@@ -1,7 +1,7 @@
 import beans.YandexSpellerAnswer;
-import core.YandexSpellerCheckTextAPI;
-import core.constants.Options;
-import core.constants.TestText;
+import dumpfiles.YandexSpellerCheckTextAPI;
+import dumpfiles.Options;
+import dumpfiles.TestText;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.apache.http.HttpStatus;
@@ -10,9 +10,9 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static core.YandexSpellerCheckTextAPI.successResponse;
-import static core.constants.Options.*;
-import static core.constants.YandexSpellerConstants.*;
+import static dumpfiles.YandexSpellerCheckTextAPI.successResponse;
+import static dumpfiles.Options.*;
+import static dumpfiles.YandexSpellerConstants.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 

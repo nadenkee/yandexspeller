@@ -10,7 +10,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.testng.Assert.assertFalse;
 
 public class checkResponse {
-    public static void checkAnswer(String[] text s, List[] expectedSuggestions, List<List<YandexSpellerAnswer>> answers, errorCodes error) {
+    public static void checkAnswer(String[] texts, List[] expectedSuggestions, List<List<YandexSpellerAnswer>> answers, errorCodes error) {
         assertThat(answers.size(), equalTo(texts.length));
         for (int i = 0; i < texts.length; i++) {
             if (!answers.get(i).isEmpty()) {

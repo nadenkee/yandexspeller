@@ -139,7 +139,7 @@ public class testYandexSpellerJSON {
                                 .extract().response());
 
         // Check that answers size is 1
-        assertThat(answers, hasSize(2));
+        assertThat(answers, hasSize(2)); //here we can put "1" to make this test crush, so it is a bug found
         assertThat(answers.get(1).toString(), containsString(TestText.RU_WORD.corrVer()));
 
     }

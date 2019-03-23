@@ -1,4 +1,4 @@
-package core.constants;
+package core.constants.refactored;
 
 public enum Options {
     IGNORE_DIGITS(2),

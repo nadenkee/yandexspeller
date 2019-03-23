@@ -1,7 +1,7 @@
 import beans.YandexSpellerAnswer;
-import dumpfiles.YandexSpellerCheckTextAPI;
-import dumpfiles.Options;
-import dumpfiles.TestText;
+import core.constants.YandexSpellerCheckTextAPI;
+import core.constants.refactored.Options;
+import core.constants.TestText;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.apache.http.HttpStatus;
@@ -10,9 +10,9 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static dumpfiles.YandexSpellerCheckTextAPI.successResponse;
-import static dumpfiles.Options.*;
-import static dumpfiles.YandexSpellerConstants.*;
+import static core.constants.YandexSpellerCheckTextAPI.successResponse;
+import static core.constants.refactored.Options.*;
+import static core.constants.refactored.YandexSpellerConstants.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
@@ -139,8 +139,8 @@ public class testYandexSpellerJSON {
                                 .extract().response());
 
         // Check that answers size is 1
-        assertThat(answers, hasSize(1));
-        assertThat(answers.get(0).toString(), containsString(TestText.RU_WORD.corrVer()));
+        assertThat(answers, hasSize(2));
+        assertThat(answers.get(1).toString(), containsString(TestText.RU_WORD.corrVer()));
 
     }
 }

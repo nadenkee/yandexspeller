@@ -1,8 +1,8 @@
-package core.constants;
+package core.constants.refactored;
 
 public class YandexSpellerConstants {
 
-    //useful constants for API under test
+    //useful options for API under test
     public static final String PARAM_TEXT = "text";
     public static final String PARAM_OPTIONS = "options";
     public static final String PARAM_LANG = "lang";
